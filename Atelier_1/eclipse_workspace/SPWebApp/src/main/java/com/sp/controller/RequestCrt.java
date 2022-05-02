@@ -44,5 +44,11 @@ public class RequestCrt {
       model.addAttribute("myPoney",p );
       return "poneyView";
   }
+  @RequestMapping(value = { "/list"}, method = RequestMethod.GET)
+  public String viewList(Model model) {
+	  model.addAttribute("poneyList",poneyDao.getPoneyList() );
+	  return "poneyViewList";
+  }
+
 
 }
