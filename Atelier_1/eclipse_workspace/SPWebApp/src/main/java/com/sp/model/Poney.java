@@ -31,6 +31,7 @@ public class Poney  {
 	public String getImgUrl() {
 		return imgUrl;
 	}
+	
 
   // GETTER AND SETTER
 }
