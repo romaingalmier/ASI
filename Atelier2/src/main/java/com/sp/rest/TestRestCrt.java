@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sp.model.Hero;
+import com.sp.model.User;
 
 
 @RestController
@@ -15,12 +15,12 @@ public class TestRestCrt {
 	
 	@RequestMapping("/hello")
 	public String sayHello() {
-		return "Hello Hero !!!";
+		return "Hello User !!!";
 	}
 	
-	@RequestMapping(method=RequestMethod.POST,value="/addhero")
-	public void addHero(@RequestBody Hero hero) {
-		System.out.println(hero);
+	@RequestMapping(method=RequestMethod.POST,value="/addUser")
+	public void addUser(@RequestBody User User) {
+		System.out.println(User);
 	}
 	
 	@RequestMapping(method=RequestMethod.GET,value="/msg/{id1}/{id2}")
